@@ -1,2 +1,115 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
+:root {
+    --white: #fff;
+    --dk-blue: #0d1238;
+    --lt-blue: #272f70;
+    --dk-green: #374d12;
+    --lt-green: #54761B;
+}
+
+body {
+    font-family: sans-serif;
+    color: var(--white);
+    background-image: url(../img/oriental-tiles.png);
+}
+h2 {
+    font-family: serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+h3 {
+    padding: 0 0.75rem;
+}
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Form section */
+section {
+    margin: 5rem 0;
+    padding: 1rem;
+    background-color: rgba(13, 18, 56, 0.7);
+}
+fieldset {
+    padding: 0;
+    border: none;
+    background-color: var(--white);
+    color: var(--dk-blue);
+    border-radius: 5px;
+}
+fieldset > p {
+    background-color: var(--lt-green);
+    color:var(--white);
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 5px 5px 0 0 ;
+}
+fieldset > div {
+    padding: 0.75rem;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-container > div {
+    flex: 0 1 50%;
+    margin-bottom: 0.75rem;
+}
+fieldset > div > label {
+    display: block;
+}
+fieldset > div > input {
+    width: 100%;
+    border: 1px solid #a2adb7;
+    background-color: #edeff0;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+    border-radius: 5px;
+}
+fieldset > div > input[type=submit] {
+    background-color: var(--lt-blue);
+    color: var(--white);
+}
+fieldset > div > input[type=submit]:hover {
+    background-color: var(--dk-blue);
+    cursor: pointer;
+}
+fieldset a {
+    color: var(--lt-green);
+    text-decoration: none;
+ 
+}
+fieldset a:hover {
+    color: var(--dk-green);
+}
+.checkbox label {
+    display: inline;
+}
+.checkbox input {
+    width: auto;
+}
+
+/* Media queries */
+@media only screen and (min-width:1000px){
+    section {
+        display: flex;
+        justify-content: space-between;
+    }
+    fieldset {
+        width:650px;
+    }
+    .heading {
+        margin-right: 1rem;
+        max-width: 650px;
+    }
+}
+@media only screen and (min-width:1440px){
+    .inner-container {
+        width: 1400px;
+        margin: 0 auto;
+    }
+    .heading{
+        margin-right: 0;
+    }
+}
